@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: rgb(30, 30, 30);
+        overflow-y: scroll; /* Show vertical scrollbar */
+      }
+
+      p {
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      label {
+        color: white;
+      }
+
+      .submit {
+        display: inline-block;
+      }
+
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .imageClass {
+        max-width: 100vw;
+      }
+
+      .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+
+        display: block;
+
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .lds-ellipsis div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .lds-ellipsis div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <script language="javascript" type="module" src="script.js"></script>
+    <title>anime pics</title>
+  </head>
+  <body>
+    <select name="order" id="order">
+      <option value="score" selected="selected">Top</option>
+      <option value="rank">Hot</option>
+      <option value="date">New</option>
+    </select>
+    <select name="age" id="age">
+      <option value="1days" selected="selected">Past 24 hours</option>
+      <option value="1weeks">Past Week</option>
+      <option value="1months">Past Month</option>
+      <option value="1years">Past Year</option>
+      <option value="20years">All time</option>
+    </select>
+    <input type="checkbox" id="highQuality" name="highQuality" value="highQuality" /><label for="highQuality">High Quality</label>
+    <input type="text" id="tagsInput" name="tagsInput" placeholder="Tags" />
+    <input type="submit" class="submit" id="submit" value="Submit " />
+    <button id="clearSaved" class="submit">Clear Saved</button>
+    <div id="image-container" class="image-container"></div>
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

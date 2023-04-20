@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Word Hunt Solver</title>
+    <script src="./main.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+
+        background-color: #121212;
+      }
+
+      label {
+        color: white;
+        margin: 1rem;
+      }
+
+      textarea {
+        background-color: #121212;
+        color: white;
+
+        border: 1px solid white;
+        border-radius: 2px;
+        margin: 1rem;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: row;
+      }
+
+      canvas {
+        border: 1px solid white;
+        display: none;
+        margin: 1rem auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inputs">
+      <label for="puzzleData">Puzzle:</label><textarea id="puzzleData" rows="5" placeholder="A B C D E F G H I J K L M N O P"></textarea> <label for="puzzleWords">Words:</label
+      ><textarea id="puzzleWords" rows="1" placeholder="AA"></textarea> <label for="puzzleWidth">Width:</label><textarea id="puzzleWidth" rows="5" placeholder="4"></textarea> <label for="puzzleHeight">Height:</label
+      ><textarea id="puzzleHeight" rows="5" placeholder="4"></textarea>
+    </div>
+    <canvas id="canvas"></canvas>
+  </body>
+</html>

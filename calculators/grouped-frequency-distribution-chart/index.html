@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .numbers {
+        margin: 2rem 2rem;
+        width: 50%;
+        padding: 1rem 1rem;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .percentile {
+        margin: 2rem 2rem;
+        width: 10%;
+        padding: 1rem 1rem;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(30, 30, 30);
+        font-family: Arial, Helvetica, sans-serif;
+        white-space: pre-line;
+      }
+
+      table {
+        margin: 2rem 2rem;
+      }
+
+      td {
+        color: #ccc;
+        width: 12rem;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <script language="javascript" type="module" src="main.js"></script>
+    <title>chart generator</title>
+  </head>
+  <body>
+    <input type="text" id="numbers" class="numbers" placeholder="Data" />
+    <input type="number" id="percentile" class="percentile" placeholder="Percentile" />
+    <div id="result"><table></table></div>
+  </body>
+</html>
